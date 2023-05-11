@@ -3,6 +3,7 @@
 class CountriesSearch {
     constructor() {
         this.form = '';
+        console.log(this.form);
     }
 
     fetchCountries() {
@@ -17,3 +18,4 @@ class CountriesSearch {
 }
 
 export { CountriesSearch };
+
