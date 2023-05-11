@@ -45,7 +45,7 @@ function markupOneCountry(data) {
 //створюємо функцію для розмітки інформациї про кілька країн
 function markupMoreCountries(data) {
     return data.map(country => {
-        return `<li class="country-list-item"><img src="${country.flags.svg}" alt="Flag" width="30" height="30"></img>${country.name.official}</li>`
+        return `<li class="country-list-item"><img src="${country.flags.svg}" alt="Flag" width="30" height="30" ></img>${country.name.official}</li>`
     }).join('');
 };
 
