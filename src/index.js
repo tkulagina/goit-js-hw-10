@@ -6,7 +6,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const DEBOUNCE_DELAY = 300;
 
-//отримуємо доступ до єлементів форми
+//отримуємо доступ до елементів форми
 const form = document.querySelector("#search-box");
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
@@ -36,7 +36,7 @@ function handleError() {
 //створюємо функцію для розмітки інформації про одну країну
 function markupOneCountry(data) {
     return data.map(country => {
-        return `<img src="${country.flags.svg}" alt="Flag" width="30" height="24"></img>
+        return `<img src="${country.flags.svg}" alt="Flag" width="40" height="40"></img>
                 <h2 class="country-info-title">${country.name.official}</h2>
             <p>Capital: <span>${country.capital}</span></p><p>Population: <span>${country.population }</span></p><p>Languages: <span>${Object.values(country.languages)}</span></p>`
     }).join('');
@@ -45,7 +45,7 @@ function markupOneCountry(data) {
 //створюємо функцію для розмітки інформациї про кілька країн
 function markupMoreCountries(data) {
     return data.map(country => {
-        return `<li class="country-list-item"><img src="${country.flags.svg}" alt="Flag" width="20" height="16"></img>${country.name.official}</li>`
+        return `<li class="country-list-item"><img src="${country.flags.svg}" alt="Flag" width="30" height="30"></img>${country.name.official}</li>`
     }).join('');
 };
 
